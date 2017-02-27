@@ -1,7 +1,7 @@
 # Sniff
 
 #####
-Data Collection Framework for sniffing out public wifi signals to track walks with the dog.
+Data Collection Framework for using public wifi signals to track walks with the dog.
 
 ----
 ##Goals
@@ -13,7 +13,8 @@ Data Collection Framework for sniffing out public wifi signals to track walks wi
 ----
 ###
 Capture
-Currently leveraging an onboard wifi adapter of a raspberry pi using the following shell command:
+
+Currently leveraging an onboard wifi adapter of a raspberry pi and using the following shell command:
 
     iwlist <adapter> scan
 
@@ -22,8 +23,11 @@ This command will be performed on a cron and serialized to a timestamped file.
 
 ###
 Stream
-Using [Nifi](https://nifi.apache.org) to ingest the files, transform them into a define model for storage. [Spring Boot](https://projects.spring.io/spring-boot/) is used as the container to host a restful webservice for recieving and persisting the data.
+
+Using [Nifi](https://nifi.apache.org) to ingest the files, transform them into a defined model for storage. [Spring Boot](https://projects.spring.io/spring-boot/) is used as the container to host a restful webservice for recieving and persisting the data.
 
 ###
 Storage
-Currently using H2 but will most likely scale to postgres and ElasticSearch for later updates.
+
+Currently using H2 but will most likely scale to postgres and/or ElasticSearch for later updates.
+
