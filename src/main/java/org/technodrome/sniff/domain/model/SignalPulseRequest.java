@@ -21,5 +21,5 @@ public class SignalPulseRequest {
     @OneToOne
     private SignalPulse signalPulse;
 
-    SignalPulseRequest() {}
+    public SignalPulseRequest() {}
 }

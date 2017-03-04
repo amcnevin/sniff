@@ -25,6 +25,6 @@ public class Signal {
     private String IE;
     private String frequency;
 
-    Signal() {}
+    public Signal() {}
 
 }

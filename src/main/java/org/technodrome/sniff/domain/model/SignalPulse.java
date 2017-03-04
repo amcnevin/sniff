@@ -22,6 +22,6 @@ public class SignalPulse {
    @OneToOne
    private Signal signal;
 
-   SignalPulse() {}
+   public SignalPulse() {}
 
 }
